@@ -1,0 +1,22 @@
+{
+  "$schema": "bloodmnist-classifier metrics v1",
+  "description": "Wspólny format plików reports/results/<model>.json (O2, O3)",
+  "required_fields": ["model_name", "split", "metrics", "hyperparameters", "seed"],
+  "example": {
+    "model_name": "logistic_regression",
+    "split": "test",
+    "seed": 42,
+    "hyperparameters": {
+      "C": 1.0,
+      "class_weight": "balanced"
+    },
+    "metrics": {
+      "accuracy": 0.0,
+      "balanced_accuracy": 0.0,
+      "f1_macro": 0.0,
+      "auc_macro_ovr": 0.0
+    },
+    "classification_report": {},
+    "confusion_matrix": []
+  }
+}

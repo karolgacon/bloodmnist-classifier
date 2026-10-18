@@ -1,0 +1,316 @@
+# Źródło prawdy postępu projektu — aktualizuj przy każdej sesji / agencie.
+# Instrukcje: docs/AGENTS.md
+# Ostatnia aktualizacja: 2026-03-22 (sesja wspólna — szkielet repo)
+
+schema_version: 1
+
+team:
+  - name: Karol
+    role_id: null # O1 | O2 | O3 | O4 — przypisz na sesji
+  - name: Marcin
+    role_id: null
+  - name: Mateusz
+    role_id: null
+  - name: Julka
+    role_id: null
+
+# Po przypisaniu ról ustaw np. O1: Karol
+role_assignment:
+  O1: null
+  O2: null
+  O3: null
+  O4: null
+
+status_legend:
+  todo: Do zrobienia
+  in_progress: W trakcie
+  done: Ukończone
+  blocked: Zablokowane (opis w notes)
+
+milestones:
+  D3:
+    label: data_contract zatwierdzony
+    due: dzień 3
+    status: todo
+  D10:
+    label: metrics_schema używany przez O2 i O3
+    due: dzień 10
+    status: todo
+  D17:
+    label: Zamrożone hiperparametry
+    due: dzień 17
+    status: todo
+  D20:
+    label: Test day (tylko inference)
+    due: dzień 20
+    status: todo
+
+tasks:
+  # --- Faza 1: sesja wspólna (repo) ---
+  - id: P1-01
+    phase: 1
+    owner: team
+    title: Drzewo katalogów bloodmnist-classifier
+    status: done
+    artifacts: []
+  - id: P1-02
+    phase: 1
+    owner: team
+    title: README, LICENSE, requirements, .gitignore
+    status: done
+    artifacts:
+      - README.md
+      - LICENSE
+      - requirements.txt
+      - .gitignore
+  - id: P1-03
+    phase: 1
+    owner: team
+    title: src/config.py i stuby modułów
+    status: done
+    artifacts:
+      - src/
+  - id: P1-04
+    phase: 1
+    owner: team
+    title: docs PLAN, ROLES, data_contract (szkielet)
+    status: done
+    artifacts:
+      - docs/PLAN_IMPLEMENTACJI.md
+      - docs/ROLES.md
+      - docs/data_contract.md
+  - id: P1-05
+    phase: 1
+    owner: team
+    title: metrics_schema.json + test_imports
+    status: done
+    artifacts:
+      - reports/results/metrics_schema.json
+      - tests/test_imports.py
+  - id: P1-06
+    phase: 1
+    owner: team
+    title: git init lokalnie
+    status: done
+    notes: Zdalny GitHub — docs/GITHUB_SETUP.md
+  - id: P1-07
+    phase: 1
+    owner: team
+    title: Przypisanie ról O1–O4 do imion
+    status: todo
+    notes: Uzupełnij role_assignment w tym pliku + README + ROLES.md
+  - id: P1-08
+    phase: 1
+    owner: team
+    title: Pierwszy push na GitHub
+    status: todo
+    notes: docs/GITHUB_SETUP.md
+
+  # --- O1 Data Lead ---
+  - id: O1-01
+    phase: 2
+    owner: O1
+    title: Integracja BloodMNIST (load.py)
+    status: in_progress
+    notes: load.py gotowe; datasets/eda do dokończenia
+    artifacts:
+      - src/data/load.py
+  - id: O1-02
+    phase: 2
+    owner: O1
+    title: EDA — min. 4 figury
+    status: todo
+    artifacts:
+      - reports/figures/
+      - scripts/run_eda.py
+      - src/data/eda.py
+  - id: O1-03
+    phase: 2
+    owner: O1
+    title: datasets.py — transformy i DataLoaders
+    status: todo
+    artifacts:
+      - src/data/datasets.py
+  - id: O1-04
+    phase: 2
+    owner: O1
+    title: dataset_stats.json (mean/std train)
+    status: todo
+    artifacts:
+      - reports/results/dataset_stats.json
+  - id: O1-05
+    phase: 2
+    owner: O1
+    title: data_contract.md — wersja finalna (D3)
+    status: todo
+    artifacts:
+      - docs/data_contract.md
+  - id: O1-06
+    phase: 2
+    owner: O1
+    title: Wykres spójności rozkładu train/val/test
+    status: todo
+  - id: O1-07
+    phase: 2
+    owner: O1
+    title: Tekst raportu — sekcja Przygotowanie danych
+    status: todo
+
+  # --- O2 Classical ML ---
+  - id: O2-01
+    phase: 2
+    owner: O2
+    title: tabular.py — flatten + PCA pipeline
+    status: todo
+    artifacts:
+      - src/features/tabular.py
+  - id: O2-02
+    phase: 2
+    owner: O2
+    title: Majority baseline na test
+    status: todo
+  - id: O2-03
+    phase: 2
+    owner: O2
+    title: Logistic Regression + tuning CV
+    status: todo
+  - id: O2-04
+    phase: 2
+    owner: O2
+    title: SVM RBF + tuning CV
+    status: todo
+  - id: O2-05
+    phase: 2
+    owner: O2
+    title: Random Forest + tuning CV
+    status: todo
+  - id: O2-06
+    phase: 2
+    owner: O2
+    title: metrics.py + plots.py (wspólny format JSON)
+    status: todo
+    artifacts:
+      - src/evaluation/metrics.py
+      - src/evaluation/plots.py
+  - id: O2-07
+    phase: 2
+    owner: O2
+    title: Ewaluacja test + sklearn JSON + CM
+    status: todo
+    artifacts:
+      - reports/results/
+      - models/best_sklearn.joblib
+  - id: O2-08
+    phase: 2
+    owner: O2
+    title: Tekst raportu — modelowanie (część klasyczna)
+    status: todo
+
+  # --- O3 Deep Learning ---
+  - id: O3-01
+    phase: 2
+    owner: O3
+    title: resnet.py MedMNIST-style
+    status: todo
+    artifacts:
+      - src/models/resnet.py
+  - id: O3-02
+    phase: 2
+    owner: O3
+    title: train_cnn.py — pętla, logi, early stopping
+    status: todo
+    artifacts:
+      - src/models/train_cnn.py
+      - scripts/train_cnn.py
+  - id: O3-03
+    phase: 2
+    owner: O3
+    title: Tuning hiperparametrów CNN (val)
+    status: todo
+  - id: O3-04
+    phase: 2
+    owner: O3
+    title: Ablacja CNN z/bez augmentacji
+    status: todo
+  - id: O3-05
+    phase: 2
+    owner: O3
+    title: best_cnn.pt + predict_proba dla Streamlit
+    status: todo
+    artifacts:
+      - models/best_cnn.pt
+  - id: O3-06
+    phase: 2
+    owner: O3
+    title: Porównanie z benchmarkiem MedMNIST w raporcie
+    status: todo
+  - id: O3-07
+    phase: 2
+    owner: O3
+    title: Tekst raportu — modelowanie (CNN)
+    status: todo
+
+  # --- O4 XAI & integracja ---
+  - id: O4-01
+    phase: 2
+    owner: O4
+    title: gradcam.py
+    status: todo
+    artifacts:
+      - src/explain/gradcam.py
+  - id: O4-02
+    phase: 2
+    owner: O4
+    title: shap_sklearn.py
+    status: todo
+    artifacts:
+      - src/explain/shap_sklearn.py
+  - id: O4-03
+    phase: 2
+    owner: O4
+    title: error_analysis.py + galeria błędów
+    status: todo
+    artifacts:
+      - scripts/error_analysis.py
+      - reports/figures/errors/
+  - id: O4-04
+    phase: 2
+    owner: O4
+    title: Streamlit — 4 zakładki produkcyjne
+    status: todo
+    artifacts:
+      - src/app/streamlit_app.py
+  - id: O4-05
+    phase: 2
+    owner: O4
+    title: leaderboard.csv (make_results_table.py)
+    status: todo
+  - id: O4-06
+    phase: 2
+    owner: O4
+    title: Organizacja test day (D20)
+    status: todo
+  - id: O4-07
+    phase: 2
+    owner: O4
+    title: Raport końcowy .docx/.pdf + sekcje 4–6
+    status: todo
+
+  # --- Wspólne / checklist oceny ---
+  - id: X-01
+    phase: 2
+    owner: team
+    title: Checklist pod maksymalną ocenę (PLAN §)
+    status: todo
+    notes: Odznacz w docs/PLAN_IMPLEMENTACJI.md gdy spełnione
+
+grade_checklist:
+  official_split_and_citations: false
+  baseline_sklearn_cnn_benchmark: false
+  macro_metrics_and_per_class: false
+  tuning_documented: false
+  gradcam_and_shap: false
+  error_analysis_figures: false
+  streamlit_and_readme: false
+  reproducibility: false
+  ethics_and_limitations: false
