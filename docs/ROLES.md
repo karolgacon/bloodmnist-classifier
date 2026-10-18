@@ -1,15 +1,13 @@
 # Podział ról — BloodMNIST Classifier
 
-**Zespół:** Karol, Marcin, Mateusz, Julka.
-
-Przypisanie O1–O4 ustalcie na sesji i wpisz w [PROGRESS.yaml](PROGRESS.yaml) (`role_assignment`) oraz w tabeli poniżej.
+**Zespół:** Mateusz (O1), Julia (O2), Marcin (O3), Karol (O4).
 
 | ID | Rola | Osoba | Główne pliki |
 |----|------|--------|--------------|
-| O1 | Data Lead | *(przypisz)* | `src/data/*`, `scripts/run_eda.py`, `reports/figures/` |
-| O2 | Classical ML | *(przypisz)* | `src/features/tabular.py`, `src/models/train_sklearn.py`, `src/evaluation/*` |
-| O3 | Deep Learning | *(przypisz)* | `src/models/resnet.py`, `src/models/train_cnn.py`, `scripts/train_cnn.py` |
-| O4 | XAI & integracja | *(przypisz)* | `src/explain/*`, `src/app/streamlit_app.py`, `scripts/error_analysis.py`, `scripts/make_results_table.py` |
+| O1 | Data Lead | **Mateusz** | `src/data/*`, `scripts/run_eda.py`, `reports/figures/` |
+| O2 | Classical ML | **Julia** | `src/features/tabular.py`, `src/models/train_sklearn.py`, `src/evaluation/*` |
+| O3 | Deep Learning | **Marcin** | `src/models/resnet.py`, `src/models/train_cnn.py`, `scripts/train_cnn.py` |
+| O4 | XAI & integracja | **Karol** | `src/explain/*`, `src/app/streamlit_app.py`, `scripts/error_analysis.py`, `scripts/make_results_table.py` |
 
 **Twoje zadania:** filtruj w [PROGRESS.yaml](PROGRESS.yaml) po `owner: O1` (lub O2/O3/O4).
 

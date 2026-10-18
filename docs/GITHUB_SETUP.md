@@ -44,7 +44,7 @@ git push -u origin main
 - **HTTPS:** Personal Access Token zamiast hasła ([GitHub → Settings → Developer settings → PAT](https://github.com/settings/tokens)).
 - **SSH:** `git@github.com:TWOJ_USER/bloodmnist-classifier.git` po skonfigurowanym kluczu SSH.
 
-## 4. Zespół (Marcin, Mateusz, Julka)
+## 4. Zespół (Mateusz, Julia, Marcin, Karol)
 
 - **Private repo:** Settings → Collaborators → dodaj konta.
 - **Organizacja:** dodaj repozytorium do teamu lub daj write access.

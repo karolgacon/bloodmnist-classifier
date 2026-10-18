@@ -6,14 +6,14 @@ Klasyfikacja **8 typów krwinek obwodowych** na zbiorze [BloodMNIST](https://med
 
 ## Zespół
 
-Karol, Marcin, Mateusz, Julka — role O1–O4 przypisz w [docs/PROGRESS.yaml](docs/PROGRESS.yaml).
-
 | Rola | Osoba | Zakres |
 |------|--------|--------|
-| O1 — Data Lead | *(przypisz)* | EDA, pipeline danych, `data_contract` |
-| O2 — Classical ML | *(przypisz)* | LR, SVM, RF, tuning CV |
-| O3 — Deep Learning | *(przypisz)* | ResNet-18, trening, benchmark |
-| O4 — XAI & integracja | *(przypisz)* | Grad-CAM, SHAP, Streamlit, raport |
+| O1 — Data Lead | **Mateusz** | EDA, pipeline danych, `data_contract` |
+| O2 — Classical ML | **Julia** | LR, SVM, RF, tuning CV |
+| O3 — Deep Learning | **Marcin** | ResNet-18, trening, benchmark |
+| O4 — XAI & integracja | **Karol** | Grad-CAM, SHAP, Streamlit, raport |
+
+**Repo:** https://github.com/karolgacon/bloodmnist-classifier
 
 **Postęp:** [docs/PROGRESS.yaml](docs/PROGRESS.yaml) · **Agenci AI:** [docs/AGENTS.md](docs/AGENTS.md) · **GitHub:** [docs/GITHUB_SETUP.md](docs/GITHUB_SETUP.md)
 
@@ -45,7 +45,8 @@ python -m pytest tests/
 Szczegóły i statusy zadań: **`python scripts/progress_summary.py`** lub [docs/PROGRESS.yaml](docs/PROGRESS.yaml).
 
 - [x] Szkielet repozytorium (Faza 1 — większość zadań P1-*)
-- [ ] Przypisanie ról O1–O4 + push GitHub (P1-07, P1-08)
+- [x] Przypisanie ról O1–O4 (P1-07)
+- [ ] Push / sync GitHub (P1-08) — po każdej większej zmianie
 - [ ] Faza 2: zadania O1-* … O4-* według PROGRESS.yaml
 - [ ] Test day (D20)
 

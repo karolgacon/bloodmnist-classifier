@@ -1,6 +1,6 @@
 # Instrukcja dla agentów AI (Cursor / inne)
 
-Zespół: **Karol, Marcin, Mateusz, Julka**. Każda osoba może pracować z własnym agentem — utrzymujcie **spójny** stan zadań w jednym pliku.
+Zespół: **Mateusz (O1), Julia (O2), Marcin (O3), Karol (O4)**. Każda osoba może pracować z własnym agentem — utrzymujcie **spójny** stan zadań w jednym pliku.
 
 ## Źródło prawdy
 

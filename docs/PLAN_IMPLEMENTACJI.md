@@ -10,14 +10,14 @@
 
 Podgląd w terminalu: `python scripts/progress_summary.py` (z roota repo).
 
-**Zespół:** Karol, Marcin, Mateusz, Julka — role O1–O4 przypisz w `PROGRESS.yaml` → `role_assignment` i w tabeli poniżej.
+**Zespół:** Mateusz (O1), Julia (O2), Marcin (O3), Karol (O4) — zapis w [PROGRESS.yaml](PROGRESS.yaml).
 
-| Rola | Osoba (przypisz) |
-|------|------------------|
-| O1 — Data Lead | *(do ustalenia)* |
-| O2 — Classical ML | *(do ustalenia)* |
-| O3 — Deep Learning | *(do ustalenia)* |
-| O4 — XAI & integracja | *(do ustalenia)* |
+| Rola | Osoba |
+|------|--------|
+| O1 — Data Lead | Mateusz |
+| O2 — Classical ML | Julia |
+| O3 — Deep Learning | Marcin |
+| O4 — XAI & integracja | Karol |
 
 Skrót ról: [ROLES.md](ROLES.md). Kontrakt danych: [data_contract.md](data_contract.md).
 
