@@ -102,8 +102,8 @@ tasks:
     phase: 1
     owner: team
     title: Pierwszy push na GitHub
-    status: todo
-    notes: docs/GITHUB_SETUP.md
+    status: done
+    notes: https://github.com/karolgacon/bloodmnist-classifier
 
   # --- O1 Data Lead ---
   - id: O1-01
