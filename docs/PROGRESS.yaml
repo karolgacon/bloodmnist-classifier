@@ -134,7 +134,8 @@ tasks:
     phase: 2
     owner: O1
     title: dataset_stats.json (mean/std train)
-    status: todo
+    status: done
+    notes: scripts/run_eda.py → mean/std/background (train), class_counts per split; wartości skopiowane do src/config.py (test_config_matches_stats_json)
     artifacts:
       - reports/results/dataset_stats.json
   - id: O1-05

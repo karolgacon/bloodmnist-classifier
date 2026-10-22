@@ -34,9 +34,11 @@ CLASS_NAMES_PL = {
     7: "Płytka krwi",
 }
 
-# Filled by O1 after EDA (see reports/results/dataset_stats.json)
-NORMALIZE_MEAN = (0.5, 0.5, 0.5)
-NORMALIZE_STD = (0.5, 0.5, 0.5)
+# From reports/results/dataset_stats.json (train split only; scripts/run_eda.py).
+# Keep in sync — checked by tests/test_data.py.
+NORMALIZE_MEAN = (0.7943, 0.6597, 0.6962)
+NORMALIZE_STD = (0.2156, 0.2416, 0.1179)
+ROTATION_FILL = (238, 208, 190)  # median train border colour, uint8 RGB
 
 CNN_BATCH_SIZE = 64
 CNN_EPOCHS = 50
