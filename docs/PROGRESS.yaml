@@ -161,7 +161,10 @@ tasks:
     phase: 2
     owner: O1
     title: Tekst raportu — sekcja Przygotowanie danych
-    status: todo
+    status: done
+    notes: szkic w reports/text/02_przygotowanie_danych.md (Opis danych + §2, podpisy Rys. 2.1–2.5, literatura)
+    artifacts:
+      - reports/text/02_przygotowanie_danych.md
 
   # --- O2 Classical ML ---
   - id: O2-01
