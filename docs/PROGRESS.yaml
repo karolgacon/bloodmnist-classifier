@@ -127,7 +127,8 @@ tasks:
     phase: 2
     owner: O1
     title: datasets.py — transformy i DataLoaders
-    status: todo
+    status: done
+    notes: get_dataloaders(batch_size, num_workers, download, augment, seed), get_datasets() dla O4; augment=False → ablacja O3-04; testy w tests/test_data.py
     artifacts:
       - src/data/datasets.py
   - id: O1-04
