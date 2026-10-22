@@ -118,7 +118,8 @@ tasks:
     phase: 2
     owner: O1
     title: EDA — min. 4 figury
-    status: todo
+    status: done
+    notes: python scripts/run_eda.py [--lang pl|en] → 5 figur eda_*.png (rozkład klas, siatka próbek, histogram RGB, prototypy klas, spójność podziałów)
     artifacts:
       - reports/figures/
       - scripts/run_eda.py
@@ -150,7 +151,10 @@ tasks:
     phase: 2
     owner: O1
     title: Wykres spójności rozkładu train/val/test
-    status: todo
+    status: done
+    notes: reports/figures/eda_split_consistency.png (generowany przez run_eda.py)
+    artifacts:
+      - reports/figures/eda_split_consistency.png
   - id: O1-07
     phase: 2
     owner: O1
