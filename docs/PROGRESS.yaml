@@ -110,8 +110,8 @@ tasks:
     phase: 2
     owner: O1
     title: Integracja BloodMNIST (load.py)
-    status: in_progress
-    notes: load.py gotowe; datasets/eda do dokończenia
+    status: done
+    notes: load.py — get_medmnist_splits(download=True), load_numpy_split(split, download=True)
     artifacts:
       - src/data/load.py
   - id: O1-02

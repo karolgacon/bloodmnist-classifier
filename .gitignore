@@ -16,9 +16,11 @@ models/*.joblib
 !models/.gitkeep
 
 reports/figures/**/*.png
+!reports/figures/eda_*.png
 reports/results/*.json
 reports/results/*.csv
 !reports/results/metrics_schema.json
+!reports/results/dataset_stats.json
 !reports/results/.gitkeep
 
 .medmnist/
