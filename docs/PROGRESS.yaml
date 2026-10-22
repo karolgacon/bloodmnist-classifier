@@ -30,7 +30,8 @@ milestones:
   D3:
     label: data_contract zatwierdzony
     due: dzień 3
-    status: todo
+    status: in_progress
+    notes: data_contract.md gotowy (O1-05) — czeka na potwierdzenie O2 (Julia) i O3 (Marcin)
   D10:
     label: metrics_schema używany przez O2 i O3
     due: dzień 10
@@ -144,7 +145,8 @@ tasks:
     phase: 2
     owner: O1
     title: data_contract.md — wersja finalna (D3)
-    status: todo
+    status: done
+    notes: API, kształty, transformy, statystyki, przykłady użycia dla O2/O3/O4
     artifacts:
       - docs/data_contract.md
   - id: O1-06
