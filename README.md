@@ -55,6 +55,7 @@ Szczegóły i statusy zadań: **`python scripts/progress_summary.py`** lub [docs
 ```bash
 python scripts/run_eda.py
 python scripts/train_sklearn.py
+python scripts/evaluate_sklearn_test.py
 python scripts/train_cnn.py
 streamlit run src/app/streamlit_app.py
 ```

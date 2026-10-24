@@ -17,10 +17,13 @@ models/*.joblib
 
 reports/figures/**/*.png
 !reports/figures/eda_*.png
+!reports/figures/sklearn_*.png
+!reports/figures/confusion_matrix_sklearn.png
 reports/results/*.json
 reports/results/*.csv
 !reports/results/metrics_schema.json
 !reports/results/dataset_stats.json
+!reports/results/sklearn_*.json
 !reports/results/.gitkeep
 
 .medmnist/
