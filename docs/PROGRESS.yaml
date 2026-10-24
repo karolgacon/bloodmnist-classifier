@@ -1,6 +1,6 @@
 # Źródło prawdy postępu projektu — aktualizuj przy każdej sesji / agencie.
 # Instrukcje: docs/AGENTS.md
-# Ostatnia aktualizacja: 2026-03-22 (sesja wspólna — szkielet repo)
+# Ostatnia aktualizacja: 2026-10-24 (O2 — modele klasyczne, wyniki val)
 
 schema_version: 1
 
@@ -171,34 +171,48 @@ tasks:
     phase: 2
     owner: O2
     title: tabular.py — flatten + PCA pipeline
-    status: todo
+    status: done
+    notes: make_feature_pipeline(pca) — flatten → StandardScaler → PCA w jednym Pipeline (fit tylko na train / foldach CV); build_feature_matrix(images, pca, pipeline)
     artifacts:
       - src/features/tabular.py
   - id: O2-02
     phase: 2
     owner: O2
     title: Majority baseline na test
-    status: todo
+    status: in_progress
+    notes: DummyClassifier(most_frequent) — val macro F1 0.041, acc 0.195; wynik na test na D20 (scripts/evaluate_sklearn_test.py)
+    artifacts:
+      - reports/results/val/sklearn_majority_baseline.json
   - id: O2-03
     phase: 2
     owner: O2
     title: Logistic Regression + tuning CV
-    status: todo
+    status: done
+    notes: RandomizedSearchCV 12 iter, StratifiedKFold(3), f1_macro, pełne 2352 cechy; C=0.0064 — CV F1 0.780 ± 0.007, val F1 0.809
+    artifacts:
+      - reports/results/val/sklearn_logistic_regression.json
   - id: O2-04
     phase: 2
     owner: O2
     title: SVM RBF + tuning CV
-    status: todo
+    status: done
+    notes: PCA=150, C=19.6, gamma=2.0e-4 — CV F1 0.826 ± 0.004, val F1 0.858, AUC 0.986; najlepszy wg CV na train → models/best_sklearn.joblib
+    artifacts:
+      - reports/results/val/sklearn_svm_rbf.json
   - id: O2-05
     phase: 2
     owner: O2
     title: Random Forest + tuning CV
-    status: todo
+    status: done
+    notes: 300 drzew, max_depth=20, min_samples_leaf=4, max_features=0.05, balanced_subsample — CV F1 0.808 ± 0.009, val F1 0.838
+    artifacts:
+      - reports/results/val/sklearn_random_forest.json
   - id: O2-06
     phase: 2
     owner: O2
     title: metrics.py + plots.py (wspólny format JSON)
-    status: todo
+    status: done
+    notes: compute_metrics(y_true, y_pred, y_proba) + build_metrics_record(...) → format metrics_schema.json (dla O3 też); plot_confusion_matrix, plot_metric_comparison; testy tests/test_sklearn.py
     artifacts:
       - src/evaluation/metrics.py
       - src/evaluation/plots.py
@@ -206,15 +220,21 @@ tasks:
     phase: 2
     owner: O2
     title: Ewaluacja test + sklearn JSON + CM
-    status: todo
+    status: in_progress
+    notes: modele zapisane (models/sklearn_*.joblib, best_sklearn.joblib = SVM; joblib w .gitignore — odtworzyć przez scripts/train_sklearn.py); ewaluacja test dopiero na D20 — python scripts/evaluate_sklearn_test.py (src/models/evaluate_sklearn.py, osobno od treningu) → reports/results/sklearn_*.json + reports/figures/confusion_matrix_sklearn.png
     artifacts:
-      - reports/results/
+      - reports/results/sklearn_tuning.json
+      - reports/results/val/
+      - reports/figures/sklearn_*.png
       - models/best_sklearn.joblib
   - id: O2-08
     phase: 2
     owner: O2
     title: Tekst raportu — modelowanie (część klasyczna)
-    status: todo
+    status: in_progress
+    notes: szkic reports/text/03_modelowanie_klasyczne.md (CV + val, analiza per klasa); tabela test do uzupełnienia po D20
+    artifacts:
+      - reports/text/03_modelowanie_klasyczne.md
 
   # --- O3 Deep Learning ---
   - id: O3-01
